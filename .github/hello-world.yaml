@@ -1,1 +1,10 @@
-name : "HelloWorld"
+name : hello-world
+on : push
+jobs :
+  job1 :
+    runs-on: ubuntu-latest
+    steps:
+      - name : Hello World
+        uses: actions/checkout@v3 #basically this specifies a 3rd party prebuilt action 
+      - name: CustomScript
+        run: echo "hello who are you"
